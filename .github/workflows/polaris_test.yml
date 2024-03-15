@@ -22,7 +22,7 @@ jobs:
           polaris_assessment_types: "SCA"
           
           ### SCANNING: Optional fields
-          # polaris_application_name: ${{ github.event.organization.name }}
+          polaris_application_name: "gitlab-goof-automation"
           polaris_project_name: "gitlab-goof-automation"
           polaris_test_sca_type: "SCA-SIGNATURE" 
           
