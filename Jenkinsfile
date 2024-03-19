@@ -1,8 +1,6 @@
 pipeline {
     agent any
-    // environment {
-    //     BLACKDUCK_TRUST_CERT=true
-    // }
+
     stages {
         stage("unit-test") {
             steps {
@@ -19,7 +17,8 @@ pipeline {
               	echo 'SYNOPSYS SECURITY SCAN EXECUTION STARTED'
 
                 script {
-                   synopsys_scan product:'blackduck',  blackduck_url: 'https://testing.blackduck.synopsys.com/', blackduck_scan_full: false 
+                   synopsys_scan product: "polaris", polaris_application_name: "gitlab-goof-automation", polaris_project_name: "gitlab-goof-automation", 
+                       polaris_assessment_types: "SCA", polaris_branch_name: "main", polaris_test_sca_type: "SCA-SIGNATURE"
                 }	
             }
         }
