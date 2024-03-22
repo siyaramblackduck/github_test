@@ -17,7 +17,7 @@ pipeline {
               	echo 'SYNOPSYS SECURITY SCAN EXECUTION STARTED'
 
                 script {
-                   synopsys_scan product: "polaris",
+                   synopsys_scan product: "coverity",
                        coverity_automation_prcomment: true
                        
                 }	
