@@ -17,7 +17,9 @@ pipeline {
               	echo 'SYNOPSYS SECURITY SCAN EXECUTION STARTED'
 
                 script {
-                   synopsys_scan product: "coverity"
+                   synopsys_scan product: "coverity",
+                       coverity_project_name: "test_coverity",
+                       coverity_stream_name: "test_coverity_stream"
                 }
             }
         }
