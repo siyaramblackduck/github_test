@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("unit-test") {
             steps {
-                echo 'UNIT TEST EXECUTION STARTED'
+                echo 'UNIT TEST EXECUTION STARTED  '
             }
         }
         stage("functional-test") {
