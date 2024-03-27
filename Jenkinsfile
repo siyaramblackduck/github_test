@@ -9,7 +9,7 @@ pipeline {
         }
         stage("functional-test") {
             steps {
-                echo 'FUNCTIONAL TEST EXECUTION STARTED'
+                echo 'FUNCTIONAL TEST EXECUTION STARTED  '
             }
         }
         stage("synopsys-security-scan") {
