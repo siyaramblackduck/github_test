@@ -18,8 +18,8 @@ pipeline {
 
                 script {
                    synopsys_scan product: "blackduck",
-                       blackduck_prComment_enabled: true
-                      // blackduck_automation_prcomment: true
+                      blackduck_prComment_enabled:false,
+                     blackduck_automation_prcomment: true
                 }	
             }
         }
