@@ -19,7 +19,7 @@ pipeline {
                 script {
                    synopsys_scan product: "coverity", 
                        coverity_prComment_enabled: false,
-                       coverity_automation_prcomment: false
+                       coverity_automation_prcomment: true
                 }	
             }
         }
