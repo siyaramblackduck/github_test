@@ -17,7 +17,9 @@ pipeline {
               	echo 'SYNOPSYS SECURITY SCAN EXECUTION STARTED'
 
                 script {
-                   synopsys_scan product: "coverity", coverity_automation_prcomment: true
+                   synopsys_scan product: "coverity", 
+                       coverity_prComment_enabled: true
+                       // coverity_automation_prcomment: true
                 }	
             }
         }
