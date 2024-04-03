@@ -18,8 +18,8 @@ pipeline {
 
                 script {
                    synopsys_scan product: "coverity", 
-                       coverity_prComment_enabled: true
-                       // coverity_automation_prcomment: true
+                       coverity_prComment_enabled: true,
+                       coverity_automation_prcomment: false
                 }	
             }
         }
