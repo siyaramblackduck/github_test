@@ -24,7 +24,7 @@ jobs:
           ### SCANNING: Optional fields
           polaris_application_name: "gitlab-goof-automation"
           polaris_project_name: "gitlab-goof-automation"
-          # polaris_test_sca_type: "SCA-PACKAGE" 
+          polaris_test_sca_type: "SCA-PACKAGE" 
           
           ### PULL REQUEST COMMENTS: Uncomment below to enable
           # polaris_prComment_enabled: true 
