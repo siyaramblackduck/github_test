@@ -30,7 +30,7 @@ jobs:
           polaris_reports_sarif_severities: "CRITICAL,HIGH"
           polaris_reports_sarif_groupSCAIssues: true 
           polaris_reports_sarif_issue_types: 'SCA, SAST' 
-          polaris_upload_sarif_report: true
+          # polaris_upload_sarif_report: true
           
           ### PULL REQUEST COMMENTS: Uncomment below to enable
           # polaris_prComment_enabled: true 
