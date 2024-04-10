@@ -19,12 +19,18 @@ jobs:
           synopsys_bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/2.3.21/synopsys-bridge-2.3.21-macosx.zip"
           polaris_server_url: ${{ secrets.POLARIS_SERVER_URL }}
           polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
-          polaris_assessment_types: "SCA"
+          polaris_assessment_types: "SCA,SAST"
           
           ### SCANNING: Optional fields
           polaris_application_name: "gitlab-goof-automation"
           polaris_project_name: "gitlab-goof-automation"
           # polaris_test_sca_type: "SCA-PACKAGE" 
+          polaris_reports_sarif_create: true  
+          polaris_reports_sarif_file_path: '.bridge/Polaris SARIF Generator/report.sarif.json' # File path (including file name) where SARIF report is created.
+          polaris_reports_sarif_severities: "CRITICAL,HIGH"
+          polaris_reports_sarif_groupSCAIssues: true 
+          polaris_reports_sarif_issue_types: 'SCA, SAST' 
+          # polaris_upload_sarif_report: true
           
           ### PULL REQUEST COMMENTS: Uncomment below to enable
           # polaris_prComment_enabled: true 
