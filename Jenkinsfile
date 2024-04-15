@@ -24,6 +24,7 @@ pipeline {
                       // polaris_reports_sarif_file_path: ".bridge/Polaris Generator/report.sarif.json", 
                       polaris_reports_sarif_severities: 'CRITICAL,HIGH,MEDIUM,LOW',
                       polaris_reports_sarif_issue_types: 'SCA,SAST'
+                    
                 }	
             }
         }
