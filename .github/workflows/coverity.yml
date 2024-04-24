@@ -16,7 +16,8 @@ jobs:
         uses: synopsys-sig/synopsys-action@SIGINT-1661
         with:
           ### SCANNING: Required fields
-          coverity_url: ${{ vars.COVERITY_URL }}
+          # coverity_url: ${{ vars.COVERITY_URL }}
+          coverity_url: 'https://integrationqa-20236.dev.coverity.synopsys.com'
           coverity_user: ${{ secrets.COVERITY_USER }}
           coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
           ### Coverity Connect users - Uncomment below
