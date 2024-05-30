@@ -17,7 +17,7 @@ jobs:
         with:
           ### SCANNING: Required fields
           # coverity_url: ${{ vars.COVERITY_URL }}
-          coverity_url: 'https://integrationqa-20236.dev.coverity.synopsys.com'
+          coverity_url: ${{ vars.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}
           coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
           ### Coverity Connect users - Uncomment below
