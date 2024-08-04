@@ -26,6 +26,7 @@ jobs:
           polaris_server_url: ${{ vars.POLARIS_SERVERURL }}
           polaris_access_token: ${{ secrets.POLARIS_ACCESSTOKEN }}
           polaris_assessment_types: "SCA,SAST"
+          polaris_reports_sarif_create: true  
 
           # blackduck_url: ${{ vars.BLACKDUCK_URL }}
           # blackduck_token: ${{ secrets.BLACKDUCK_TOKEN }}
