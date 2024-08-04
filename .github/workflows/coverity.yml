@@ -25,5 +25,6 @@ jobs:
           ### POLICY ENFORCEMENT: Uncomment to break build on policy
           # coverity_policy_view: 'Outstanding Issues' 
           ### PULL REQUEST COMMENTS: Uncomment below to enable
+          
           coverity_prComment_enabled: true
           github_token: ${{ secrets.GITHUBTOKEN }} # Required when PR comments is enabled
