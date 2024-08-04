@@ -6,7 +6,8 @@
   "main": "server.js",
   "dependencies": {
     
-    "mongodb": "^2.1.18"
+    "mongodb": "^2.1.18",
+    "jquery":"2.2.4"
     
   },
   "comments": {
