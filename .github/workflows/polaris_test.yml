@@ -1,4 +1,4 @@
-name: CI-Polaris-Basic 
+name: CI-Blackduck-Basic 
 on:
   push:
     branches: [ main, master, develop, stage, release ]
@@ -12,20 +12,16 @@ jobs:
     steps:
       - name: Checkout Source
         uses: actions/checkout@v3
-      - name: Polaris Scan
+      - name: Blackduck Scan
         uses: synopsys-sig/synopsys-action@SIGINT-1463
         with:
           ### SCANNING: Required fields
-          synopsys_bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/2.3.21/synopsys-bridge-2.3.21-macosx.zip"
-          polaris_server_url: ${{ secrets.POLARIS_SERVER_URL }}
-          polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
-          polaris_assessment_types: "SCA"
-          
-          ### SCANNING: Optional fields
-          polaris_application_name: "gitlab-goof-automation"
-          polaris_project_name: "gitlab-goof-automation"
+          SYNOPSYS_BRIDGE_INSTALL_DIRECTORY: "/Users/siyaram/Downloads/synopsys-bridge-0.0.01-SNAPSHOT-macosx_2"
+          blackduck_url: ${{ vars.BLACKDUCK_URL }}
+          blackduck_token: ${{ secrets.BLACKDUCK_TOKEN }}
+          # blackduck_fixpr_enabled: true
           # polaris_test_sca_type: "SCA-PACKAGE" 
           
           ### PULL REQUEST COMMENTS: Uncomment below to enable
-          # polaris_prComment_enabled: true 
-          # github_token: ${{ secrets.GITHUB_TOKEN }} # Required when PR comments is enabled
+          blackduck_prComment_enabled: true 
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Required when PR comments is enabled
