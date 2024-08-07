@@ -17,10 +17,10 @@ jobs:
         with:
           ### SCANNING: Required fields
           # SYNOPSYS_BRIDGE_INSTALL_DIRECTORY: "/Users/siyaram/Downloads/synopsys-bridge-0.0.01-SNAPSHOT-macosx_2"
+          coverity_url: ${{ vars.COVERITY_URL }}
           # coverity_url: ${{ vars.COVERITY_URL }}
-          # coverity_url: ${{ vars.COVERITY_URL }}
-          # coverity_user: ${{ secrets.COVERITY_USER }}
-          # coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
+          coverity_user: ${{ secrets.COVERITY_USER }}
+          coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
           # include_diagnostics: true
 
           # polaris_server_url: ${{ vars.POLARIS_SERVERURL }}
@@ -29,8 +29,8 @@ jobs:
           # polaris_reports_sarif_create: true  
           # polaris_upload_sarif_report: true 
 
-          blackduck_url: ${{ vars.BLACKDUCK_URL }}
-          blackduck_token: ${{ secrets.BLACKDUCK_TOKEN }}
+          # blackduck_url: ${{ vars.BLACKDUCK_URL }}
+          # blackduck_token: ${{ secrets.BLACKDUCK_TOKEN }}
           # blackduck_fixpr_enabled: true
           # blackduck_reports_sarif_create: true
           # blackduck_upload_sarif_report: true
