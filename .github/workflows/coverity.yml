@@ -31,7 +31,7 @@ jobs:
 
           blackduck_url: ${{ vars.BLACKDUCK_URL }}
           blackduck_token: ${{ secrets.BLACKDUCK_TOKEN }}
-          blackduck_fixpr_enabled: true
+          # blackduck_fixpr_enabled: true
           # blackduck_reports_sarif_create: true
           # blackduck_upload_sarif_report: true
           ### PULL REQUEST COMMENTS: Uncomment below to enable
