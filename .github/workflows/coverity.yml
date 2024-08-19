@@ -37,6 +37,6 @@ jobs:
           ### PULL REQUEST COMMENTS: Uncomment below to enable
           # coverity_prComment_enabled: true
 
-          
+          run: /Users/siyaram/synopsys-bridge --stage coverity --diagnostics  
           github_token: ${{ secrets.GITHUBTOKEN }} # Required when PR comments is enabled
           
