@@ -16,11 +16,12 @@ jobs:
         uses: synopsys-sig/synopsys-action@SIGINT-864
         with:
           ### SCANNING: Required fields
-          # SYNOPSYS_BRIDGE_INSTALL_DIRECTORY: "/Users/siyaram/Downloads/synopsys-bridge-0.0.01-SNAPSHOT-macosx_2"
+          SYNOPSYS_BRIDGE_INSTALL_DIRECTORY: "/Users/siyaram/Downloads/synopsys-bridge-2.8.52-macosx"
           coverity_url: ${{ vars.COVERITY_URL }}
           # coverity_url: ${{ vars.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}
           coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
+          cooverity_waitForScan: true  
           include_diagnostics: true
 
           # polaris_server_url: ${{ vars.POLARIS_SERVERURL }}
