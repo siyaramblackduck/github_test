@@ -21,7 +21,7 @@ jobs:
           # coverity_url: ${{ vars.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}
           coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
-          cooverity_waitForScan: true  
+          coverity_waitForScan: true  
           include_diagnostics: true
 
           # polaris_server_url: ${{ vars.POLARIS_SERVERURL }}
