@@ -12,16 +12,16 @@ jobs:
     steps:
       - name: Checkout Source
         uses: actions/checkout@v3
-      - name: Coverity Scan
-        uses: synopsys-sig/synopsys-action@SIGINT-864
+      - name: Blackduck Scan
+        uses: synopsys-sig/synopsys-action@1.13.0-bug-fix
         with:
           ### SCANNING: Required fields
-          synopsys_bridge_download_url: "/Users/siyaram/Downloads/synopsys-bridge"
-          coverity_url: ${{ vars.COVERITY_URL }}
+          # synopsys_bridge_download_url: "/Users/siyaram/Downloads/synopsys-bridge"
           # coverity_url: ${{ vars.COVERITY_URL }}
-          coverity_user: ${{ secrets.COVERITY_USER }}
-          coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
-          coverity_waitForScan: true  
+          # coverity_url: ${{ vars.COVERITY_URL }}
+          # coverity_user: ${{ secrets.COVERITY_USER }}
+          # coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
+          # coverity_waitForScan: true  
           include_diagnostics: true
 
           # polaris_server_url: ${{ vars.POLARIS_SERVERURL }}
@@ -30,8 +30,12 @@ jobs:
           # polaris_reports_sarif_create: true  
           # polaris_upload_sarif_report: true 
 
-          # blackduck_url: ${{ vars.BLACKDUCK_URL }}
-          # blackduck_token: ${{ secrets.BLACKDUCK_TOKEN }}
+          blackduck_url: ${{ vars.BLACKDUCK_URL }}
+          blackduck_token: ${{ secrets.BLACKDUCK_TOKEN }}
+          blackduck_policy_badges_create: true
+          blackduck_policy_badges_maxCount: 5
+          # blackduck_reports_sarif_create: true
+          blackduck_waitForScan: false
           # blackduck_fixpr_enabled: true
           # blackduck_reports_sarif_create: true
           # blackduck_upload_sarif_report: true
@@ -39,5 +43,5 @@ jobs:
           # coverity_prComment_enabled: true
 
           # run: /Users/siyaram/synopsys-bridge --stage coverity --diagnostics  
-          # github_token: ${{ secrets.GITHUBTOKEN }} # Required when PR comments is enabled
+          github_token: ${{ secrets.GITHUBTOKEN }} # Required when PR comments is enabled
           
