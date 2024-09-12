@@ -35,7 +35,7 @@ jobs:
           blackduck_policy_badges_create: true
           blackduck_policy_badges_maxCount: 5
           # blackduck_reports_sarif_create: true
-          # blackduck_waitForScan: false
+          blackduck_waitForScan: false
           # blackduck_fixpr_enabled: true
           # blackduck_reports_sarif_create: true
           # blackduck_upload_sarif_report: true
