@@ -8,10 +8,11 @@ on:
   workflow_dispatch: 
 jobs:
   build:
-    runs-on: [ self-hosted ]
+    runs-on: [ ubuntu-latest ]
     steps:
       - name: Checkout Source
         uses: actions/checkout@v3
+
       - name: Blackduck Scan
         uses: synopsys-sig/synopsys-action@1.13.0-bug-fix
         with:
@@ -30,20 +31,21 @@ jobs:
           # polaris_reports_sarif_create: true  
           # polaris_upload_sarif_report: true 
 
+
           blackduck_url: ${{ vars.BLACKDUCK_URL }}
           blackduck_token: ${{ secrets.BLACKDUCK_TOKEN }}
-          blackduck_policy_badges_create: true
-          blackduck_policy_badges_maxCount: 5
+          # blackduck_policy_badges_create: true
+          # blackduck_policy_badges_maxCount: 5
           # blackduck_reports_sarif_create: true
           # blackduck_waitForScan: false
           # blackduck_fixpr_enabled: true
           # blackduck_reports_sarif_create: true
           # blackduck_upload_sarif_report: true
           ### PULL REQUEST COMMENTS: Uncomment below to enable
+          
           # coverity_prComment_enabled: true
-
-
 
           # run: /Users/siyaram/synopsys-bridge --stage coverity --diagnostics  
           github_token: ${{ secrets.GITHUBTOKEN }} # Required when PR comments is enabled
+
           
