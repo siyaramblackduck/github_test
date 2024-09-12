@@ -30,6 +30,7 @@ jobs:
           # polaris_reports_sarif_create: true  
           # polaris_upload_sarif_report: true 
 
+
           blackduck_url: ${{ vars.BLACKDUCK_URL }}
           blackduck_token: ${{ secrets.BLACKDUCK_TOKEN }}
           blackduck_policy_badges_create: true
