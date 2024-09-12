@@ -24,18 +24,19 @@ jobs:
           # coverity_waitForScan: true  
           include_diagnostics: true
 
-          # polaris_server_url: ${{ vars.POLARIS_SERVERURL }}
-          # polaris_access_token: ${{ secrets.POLARIS_ACCESSTOKEN }}
-          # polaris_assessment_types: "SCA,SAST"
-          # polaris_reports_sarif_create: true  
+          polaris_server_url: ${{ vars.POLARIS_SERVERURL }}
+          polaris_access_token: ${{ secrets.POLARIS_ACCESSTOKEN }}
+          polaris_assessment_types: "SCA,SAST"
+          polaris_reports_sarif_create: true  
+          polaris_waitForScan: false
           # polaris_upload_sarif_report: true 
 
-          blackduck_url: ${{ vars.BLACKDUCK_URL }}
-          blackduck_token: ${{ secrets.BLACKDUCK_TOKEN }}
+          # blackduck_url: ${{ vars.BLACKDUCK_URL }}
+          # blackduck_token: ${{ secrets.BLACKDUCK_TOKEN }}
           # blackduck_policy_badges_create: true
           # blackduck_policy_badges_maxCount: 5
-          blackduck_reports_sarif_create: true
-          blackduck_waitForScan: false
+          # blackduck_reports_sarif_create: true
+          # blackduck_waitForScan: false
           # blackduck_fixpr_enabled: true
           # blackduck_reports_sarif_create: true
           # blackduck_upload_sarif_report: true
